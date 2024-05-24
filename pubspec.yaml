@@ -1,0 +1,56 @@
+name: task
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  gap: ^3.0.1
+  flutter_svg: ^2.0.10+1
+  freezed: ^2.5.2
+  freezed_annotation: ^2.4.1
+  flutter_bloc: ^8.1.5
+  bloc: ^8.1.4
+  image_picker: ^1.1.1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  get_it: ^7.7.0
+  lottie: ^3.1.2
+  flutter_screenutil: ^5.9.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.9
+  hive_generator: ^2.0.1
+flutter:
+  uses-material-design: true
+  assets:
+     - assets/svg/
+     - assets/images/
+     - assets/json/
+  fonts:
+     - family: Montserrat-Arabic
+       fonts:
+         - asset: assets/fonts/Montserrat-Arabic-Bold.ttf
+           weight: 700
+         - asset: assets/fonts/Montserrat-Arabic-Medium.ttf
+           weight: 500
+         - asset: assets/fonts/Montserrat-Arabic-Regular.ttf
+           weight: 400
+         - asset: assets/fonts/Montserrat-Arabic-Light-.ttf
+           weight: 300
+     - family: DINNextLTArabic
+       fonts:
+         - asset: assets/fonts/DINNextLTArabic-Heavy.ttf
+           weight: 900
+  
+  
+  
+  
+  
+  
+  
