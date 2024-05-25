@@ -38,7 +38,8 @@ class AddProductScreenBody extends StatelessWidget {
             Gap(32),
             CategoryTitleAndDropDownWidget(),
             Gap(32),
-            AddProductButtonWidget()
+            AddProductButtonWidget(),
+            Gap(20),
           ],
         ),
       ),

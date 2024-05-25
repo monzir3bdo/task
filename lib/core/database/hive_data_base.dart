@@ -10,6 +10,7 @@ class HiveDatabase {
   Future<void> init() async {
     await Hive.initFlutter();
     Hive.registerAdapter(PhotoModelAdapter());
+    Hive.registerAdapter(CategoriesAdapter());
     Hive.registerAdapter(ProductModelAdapter());
     productsBox = await Hive.openBox('products');
   }

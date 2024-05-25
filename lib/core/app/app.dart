@@ -17,6 +17,7 @@ class App extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
+        navigatorKey: sl<GlobalKey<NavigatorState>>(),
         onGenerateRoute: RoutesManager.onGenerate,
         debugShowCheckedModeBanner: false,
         builder: (context, widget) {

@@ -60,7 +60,7 @@ class ProductsScreenBody extends StatelessWidget {
             },
           ),
         ),
-        SliverGap(20.h),
+        SliverGap(50.h),
       ],
     );
   }

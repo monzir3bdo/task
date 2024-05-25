@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';
 import 'package:task/features/products/data/local/local_data_sources.dart';
 import 'package:task/features/products/data/repo/products_repo.dart';
@@ -16,11 +17,13 @@ Future<void> setupContainer() async {
 }
 
 Future<void> _initProducts() async {
+  final navKey = GlobalKey<NavigatorState>();
   sl
     ..registerFactory(() => GetProductsBloc(sl()))
     ..registerFactory(() => ProductsCubit())
     ..registerLazySingleton(() => ProductsRepo(productLocalDataSources: sl()))
-    ..registerLazySingleton(() => ProductLocalDataSources());
+    ..registerLazySingleton(() => ProductLocalDataSources())
+    ..registerLazySingleton(() => navKey);
 }
 
 Future<void> _initAddProducts() async {

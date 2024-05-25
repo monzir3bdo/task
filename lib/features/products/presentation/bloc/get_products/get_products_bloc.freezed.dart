@@ -20,18 +20,24 @@ mixin _$GetProductsEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getProducts,
+    required TResult Function() changeProductsDisplayMode,
+    required TResult Function(Categories category) changeCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getProducts,
+    TResult? Function()? changeProductsDisplayMode,
+    TResult? Function(Categories category)? changeCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getProducts,
+    TResult Function()? changeProductsDisplayMode,
+    TResult Function(Categories category)? changeCategory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +45,25 @@ mixin _$GetProductsEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetProductsEvent value) getProducts,
+    required TResult Function(_ChangeDisplayModeEvent value)
+        changeProductsDisplayMode,
+    required TResult Function(_ChangeCategoryEvent value) changeCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetProductsEvent value)? getProducts,
+    TResult? Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult? Function(_ChangeCategoryEvent value)? changeCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetProductsEvent value)? getProducts,
+    TResult Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult Function(_ChangeCategoryEvent value)? changeCategory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +127,8 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getProducts,
+    required TResult Function() changeProductsDisplayMode,
+    required TResult Function(Categories category) changeCategory,
   }) {
     return started();
   }
@@ -123,6 +138,8 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getProducts,
+    TResult? Function()? changeProductsDisplayMode,
+    TResult? Function(Categories category)? changeCategory,
   }) {
     return started?.call();
   }
@@ -132,6 +149,8 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getProducts,
+    TResult Function()? changeProductsDisplayMode,
+    TResult Function(Categories category)? changeCategory,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -145,6 +164,9 @@ class _$StartedImpl implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetProductsEvent value) getProducts,
+    required TResult Function(_ChangeDisplayModeEvent value)
+        changeProductsDisplayMode,
+    required TResult Function(_ChangeCategoryEvent value) changeCategory,
   }) {
     return started(this);
   }
@@ -154,6 +176,8 @@ class _$StartedImpl implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetProductsEvent value)? getProducts,
+    TResult? Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult? Function(_ChangeCategoryEvent value)? changeCategory,
   }) {
     return started?.call(this);
   }
@@ -163,6 +187,8 @@ class _$StartedImpl implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetProductsEvent value)? getProducts,
+    TResult Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult Function(_ChangeCategoryEvent value)? changeCategory,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -216,6 +242,8 @@ class _$GetProductsEventImpl implements _GetProductsEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() getProducts,
+    required TResult Function() changeProductsDisplayMode,
+    required TResult Function(Categories category) changeCategory,
   }) {
     return getProducts();
   }
@@ -225,6 +253,8 @@ class _$GetProductsEventImpl implements _GetProductsEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? getProducts,
+    TResult? Function()? changeProductsDisplayMode,
+    TResult? Function(Categories category)? changeCategory,
   }) {
     return getProducts?.call();
   }
@@ -234,6 +264,8 @@ class _$GetProductsEventImpl implements _GetProductsEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? getProducts,
+    TResult Function()? changeProductsDisplayMode,
+    TResult Function(Categories category)? changeCategory,
     required TResult orElse(),
   }) {
     if (getProducts != null) {
@@ -247,6 +279,9 @@ class _$GetProductsEventImpl implements _GetProductsEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GetProductsEvent value) getProducts,
+    required TResult Function(_ChangeDisplayModeEvent value)
+        changeProductsDisplayMode,
+    required TResult Function(_ChangeCategoryEvent value) changeCategory,
   }) {
     return getProducts(this);
   }
@@ -256,6 +291,8 @@ class _$GetProductsEventImpl implements _GetProductsEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GetProductsEvent value)? getProducts,
+    TResult? Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult? Function(_ChangeCategoryEvent value)? changeCategory,
   }) {
     return getProducts?.call(this);
   }
@@ -265,6 +302,8 @@ class _$GetProductsEventImpl implements _GetProductsEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GetProductsEvent value)? getProducts,
+    TResult Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult Function(_ChangeCategoryEvent value)? changeCategory,
     required TResult orElse(),
   }) {
     if (getProducts != null) {
@@ -279,6 +318,273 @@ abstract class _GetProductsEvent implements GetProductsEvent {
 }
 
 /// @nodoc
+abstract class _$$ChangeDisplayModeEventImplCopyWith<$Res> {
+  factory _$$ChangeDisplayModeEventImplCopyWith(
+          _$ChangeDisplayModeEventImpl value,
+          $Res Function(_$ChangeDisplayModeEventImpl) then) =
+      __$$ChangeDisplayModeEventImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangeDisplayModeEventImplCopyWithImpl<$Res>
+    extends _$GetProductsEventCopyWithImpl<$Res, _$ChangeDisplayModeEventImpl>
+    implements _$$ChangeDisplayModeEventImplCopyWith<$Res> {
+  __$$ChangeDisplayModeEventImplCopyWithImpl(
+      _$ChangeDisplayModeEventImpl _value,
+      $Res Function(_$ChangeDisplayModeEventImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangeDisplayModeEventImpl implements _ChangeDisplayModeEvent {
+  const _$ChangeDisplayModeEventImpl();
+
+  @override
+  String toString() {
+    return 'GetProductsEvent.changeProductsDisplayMode()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeDisplayModeEventImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getProducts,
+    required TResult Function() changeProductsDisplayMode,
+    required TResult Function(Categories category) changeCategory,
+  }) {
+    return changeProductsDisplayMode();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getProducts,
+    TResult? Function()? changeProductsDisplayMode,
+    TResult? Function(Categories category)? changeCategory,
+  }) {
+    return changeProductsDisplayMode?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getProducts,
+    TResult Function()? changeProductsDisplayMode,
+    TResult Function(Categories category)? changeCategory,
+    required TResult orElse(),
+  }) {
+    if (changeProductsDisplayMode != null) {
+      return changeProductsDisplayMode();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetProductsEvent value) getProducts,
+    required TResult Function(_ChangeDisplayModeEvent value)
+        changeProductsDisplayMode,
+    required TResult Function(_ChangeCategoryEvent value) changeCategory,
+  }) {
+    return changeProductsDisplayMode(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetProductsEvent value)? getProducts,
+    TResult? Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult? Function(_ChangeCategoryEvent value)? changeCategory,
+  }) {
+    return changeProductsDisplayMode?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetProductsEvent value)? getProducts,
+    TResult Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult Function(_ChangeCategoryEvent value)? changeCategory,
+    required TResult orElse(),
+  }) {
+    if (changeProductsDisplayMode != null) {
+      return changeProductsDisplayMode(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ChangeDisplayModeEvent implements GetProductsEvent {
+  const factory _ChangeDisplayModeEvent() = _$ChangeDisplayModeEventImpl;
+}
+
+/// @nodoc
+abstract class _$$ChangeCategoryEventImplCopyWith<$Res> {
+  factory _$$ChangeCategoryEventImplCopyWith(_$ChangeCategoryEventImpl value,
+          $Res Function(_$ChangeCategoryEventImpl) then) =
+      __$$ChangeCategoryEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Categories category});
+}
+
+/// @nodoc
+class __$$ChangeCategoryEventImplCopyWithImpl<$Res>
+    extends _$GetProductsEventCopyWithImpl<$Res, _$ChangeCategoryEventImpl>
+    implements _$$ChangeCategoryEventImplCopyWith<$Res> {
+  __$$ChangeCategoryEventImplCopyWithImpl(_$ChangeCategoryEventImpl _value,
+      $Res Function(_$ChangeCategoryEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+  }) {
+    return _then(_$ChangeCategoryEventImpl(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as Categories,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeCategoryEventImpl implements _ChangeCategoryEvent {
+  const _$ChangeCategoryEventImpl({required this.category});
+
+  @override
+  final Categories category;
+
+  @override
+  String toString() {
+    return 'GetProductsEvent.changeCategory(category: $category)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeCategoryEventImpl &&
+            (identical(other.category, category) ||
+                other.category == category));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, category);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeCategoryEventImplCopyWith<_$ChangeCategoryEventImpl> get copyWith =>
+      __$$ChangeCategoryEventImplCopyWithImpl<_$ChangeCategoryEventImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getProducts,
+    required TResult Function() changeProductsDisplayMode,
+    required TResult Function(Categories category) changeCategory,
+  }) {
+    return changeCategory(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getProducts,
+    TResult? Function()? changeProductsDisplayMode,
+    TResult? Function(Categories category)? changeCategory,
+  }) {
+    return changeCategory?.call(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getProducts,
+    TResult Function()? changeProductsDisplayMode,
+    TResult Function(Categories category)? changeCategory,
+    required TResult orElse(),
+  }) {
+    if (changeCategory != null) {
+      return changeCategory(category);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GetProductsEvent value) getProducts,
+    required TResult Function(_ChangeDisplayModeEvent value)
+        changeProductsDisplayMode,
+    required TResult Function(_ChangeCategoryEvent value) changeCategory,
+  }) {
+    return changeCategory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GetProductsEvent value)? getProducts,
+    TResult? Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult? Function(_ChangeCategoryEvent value)? changeCategory,
+  }) {
+    return changeCategory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GetProductsEvent value)? getProducts,
+    TResult Function(_ChangeDisplayModeEvent value)? changeProductsDisplayMode,
+    TResult Function(_ChangeCategoryEvent value)? changeCategory,
+    required TResult orElse(),
+  }) {
+    if (changeCategory != null) {
+      return changeCategory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ChangeCategoryEvent implements GetProductsEvent {
+  const factory _ChangeCategoryEvent({required final Categories category}) =
+      _$ChangeCategoryEventImpl;
+
+  Categories get category;
+  @JsonKey(ignore: true)
+  _$$ChangeCategoryEventImplCopyWith<_$ChangeCategoryEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$GetProductsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -286,6 +592,8 @@ mixin _$GetProductsState {
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function(List<ProductModel> products) success,
+    required TResult Function(bool isHorizontal) displayModeChange,
+    required TResult Function(int categoryId) changeCategory,
     required TResult Function(String message) failure,
   }) =>
       throw _privateConstructorUsedError;
@@ -295,6 +603,8 @@ mixin _$GetProductsState {
     TResult? Function()? loading,
     TResult? Function()? empty,
     TResult? Function(List<ProductModel> products)? success,
+    TResult? Function(bool isHorizontal)? displayModeChange,
+    TResult? Function(int categoryId)? changeCategory,
     TResult? Function(String message)? failure,
   }) =>
       throw _privateConstructorUsedError;
@@ -304,6 +614,8 @@ mixin _$GetProductsState {
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function(List<ProductModel> products)? success,
+    TResult Function(bool isHorizontal)? displayModeChange,
+    TResult Function(int categoryId)? changeCategory,
     TResult Function(String message)? failure,
     required TResult orElse(),
   }) =>
@@ -314,6 +626,8 @@ mixin _$GetProductsState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
     required TResult Function(_Success value) success,
+    required TResult Function(_DisplayMode value) displayModeChange,
+    required TResult Function(_SelectedCategory value) changeCategory,
     required TResult Function(_Failure value) failure,
   }) =>
       throw _privateConstructorUsedError;
@@ -323,6 +637,8 @@ mixin _$GetProductsState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
     TResult? Function(_Success value)? success,
+    TResult? Function(_DisplayMode value)? displayModeChange,
+    TResult? Function(_SelectedCategory value)? changeCategory,
     TResult? Function(_Failure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
@@ -332,6 +648,8 @@ mixin _$GetProductsState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
     TResult Function(_Success value)? success,
+    TResult Function(_DisplayMode value)? displayModeChange,
+    TResult Function(_SelectedCategory value)? changeCategory,
     TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) =>
@@ -398,6 +716,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function(List<ProductModel> products) success,
+    required TResult Function(bool isHorizontal) displayModeChange,
+    required TResult Function(int categoryId) changeCategory,
     required TResult Function(String message) failure,
   }) {
     return initial();
@@ -410,6 +730,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function()? empty,
     TResult? Function(List<ProductModel> products)? success,
+    TResult? Function(bool isHorizontal)? displayModeChange,
+    TResult? Function(int categoryId)? changeCategory,
     TResult? Function(String message)? failure,
   }) {
     return initial?.call();
@@ -422,6 +744,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function(List<ProductModel> products)? success,
+    TResult Function(bool isHorizontal)? displayModeChange,
+    TResult Function(int categoryId)? changeCategory,
     TResult Function(String message)? failure,
     required TResult orElse(),
   }) {
@@ -438,6 +762,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
     required TResult Function(_Success value) success,
+    required TResult Function(_DisplayMode value) displayModeChange,
+    required TResult Function(_SelectedCategory value) changeCategory,
     required TResult Function(_Failure value) failure,
   }) {
     return initial(this);
@@ -450,6 +776,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
     TResult? Function(_Success value)? success,
+    TResult? Function(_DisplayMode value)? displayModeChange,
+    TResult? Function(_SelectedCategory value)? changeCategory,
     TResult? Function(_Failure value)? failure,
   }) {
     return initial?.call(this);
@@ -462,6 +790,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
     TResult Function(_Success value)? success,
+    TResult Function(_DisplayMode value)? displayModeChange,
+    TResult Function(_SelectedCategory value)? changeCategory,
     TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {
@@ -518,6 +848,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function(List<ProductModel> products) success,
+    required TResult Function(bool isHorizontal) displayModeChange,
+    required TResult Function(int categoryId) changeCategory,
     required TResult Function(String message) failure,
   }) {
     return loading();
@@ -530,6 +862,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function()? empty,
     TResult? Function(List<ProductModel> products)? success,
+    TResult? Function(bool isHorizontal)? displayModeChange,
+    TResult? Function(int categoryId)? changeCategory,
     TResult? Function(String message)? failure,
   }) {
     return loading?.call();
@@ -542,6 +876,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function(List<ProductModel> products)? success,
+    TResult Function(bool isHorizontal)? displayModeChange,
+    TResult Function(int categoryId)? changeCategory,
     TResult Function(String message)? failure,
     required TResult orElse(),
   }) {
@@ -558,6 +894,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
     required TResult Function(_Success value) success,
+    required TResult Function(_DisplayMode value) displayModeChange,
+    required TResult Function(_SelectedCategory value) changeCategory,
     required TResult Function(_Failure value) failure,
   }) {
     return loading(this);
@@ -570,6 +908,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
     TResult? Function(_Success value)? success,
+    TResult? Function(_DisplayMode value)? displayModeChange,
+    TResult? Function(_SelectedCategory value)? changeCategory,
     TResult? Function(_Failure value)? failure,
   }) {
     return loading?.call(this);
@@ -582,6 +922,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
     TResult Function(_Success value)? success,
+    TResult Function(_DisplayMode value)? displayModeChange,
+    TResult Function(_SelectedCategory value)? changeCategory,
     TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {
@@ -638,6 +980,8 @@ class _$EmptyImpl implements _Empty {
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function(List<ProductModel> products) success,
+    required TResult Function(bool isHorizontal) displayModeChange,
+    required TResult Function(int categoryId) changeCategory,
     required TResult Function(String message) failure,
   }) {
     return empty();
@@ -650,6 +994,8 @@ class _$EmptyImpl implements _Empty {
     TResult? Function()? loading,
     TResult? Function()? empty,
     TResult? Function(List<ProductModel> products)? success,
+    TResult? Function(bool isHorizontal)? displayModeChange,
+    TResult? Function(int categoryId)? changeCategory,
     TResult? Function(String message)? failure,
   }) {
     return empty?.call();
@@ -662,6 +1008,8 @@ class _$EmptyImpl implements _Empty {
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function(List<ProductModel> products)? success,
+    TResult Function(bool isHorizontal)? displayModeChange,
+    TResult Function(int categoryId)? changeCategory,
     TResult Function(String message)? failure,
     required TResult orElse(),
   }) {
@@ -678,6 +1026,8 @@ class _$EmptyImpl implements _Empty {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
     required TResult Function(_Success value) success,
+    required TResult Function(_DisplayMode value) displayModeChange,
+    required TResult Function(_SelectedCategory value) changeCategory,
     required TResult Function(_Failure value) failure,
   }) {
     return empty(this);
@@ -690,6 +1040,8 @@ class _$EmptyImpl implements _Empty {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
     TResult? Function(_Success value)? success,
+    TResult? Function(_DisplayMode value)? displayModeChange,
+    TResult? Function(_SelectedCategory value)? changeCategory,
     TResult? Function(_Failure value)? failure,
   }) {
     return empty?.call(this);
@@ -702,6 +1054,8 @@ class _$EmptyImpl implements _Empty {
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
     TResult Function(_Success value)? success,
+    TResult Function(_DisplayMode value)? displayModeChange,
+    TResult Function(_SelectedCategory value)? changeCategory,
     TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {
@@ -791,6 +1145,8 @@ class _$SuccessImpl implements _Success {
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function(List<ProductModel> products) success,
+    required TResult Function(bool isHorizontal) displayModeChange,
+    required TResult Function(int categoryId) changeCategory,
     required TResult Function(String message) failure,
   }) {
     return success(products);
@@ -803,6 +1159,8 @@ class _$SuccessImpl implements _Success {
     TResult? Function()? loading,
     TResult? Function()? empty,
     TResult? Function(List<ProductModel> products)? success,
+    TResult? Function(bool isHorizontal)? displayModeChange,
+    TResult? Function(int categoryId)? changeCategory,
     TResult? Function(String message)? failure,
   }) {
     return success?.call(products);
@@ -815,6 +1173,8 @@ class _$SuccessImpl implements _Success {
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function(List<ProductModel> products)? success,
+    TResult Function(bool isHorizontal)? displayModeChange,
+    TResult Function(int categoryId)? changeCategory,
     TResult Function(String message)? failure,
     required TResult orElse(),
   }) {
@@ -831,6 +1191,8 @@ class _$SuccessImpl implements _Success {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
     required TResult Function(_Success value) success,
+    required TResult Function(_DisplayMode value) displayModeChange,
+    required TResult Function(_SelectedCategory value) changeCategory,
     required TResult Function(_Failure value) failure,
   }) {
     return success(this);
@@ -843,6 +1205,8 @@ class _$SuccessImpl implements _Success {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
     TResult? Function(_Success value)? success,
+    TResult? Function(_DisplayMode value)? displayModeChange,
+    TResult? Function(_SelectedCategory value)? changeCategory,
     TResult? Function(_Failure value)? failure,
   }) {
     return success?.call(this);
@@ -855,6 +1219,8 @@ class _$SuccessImpl implements _Success {
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
     TResult Function(_Success value)? success,
+    TResult Function(_DisplayMode value)? displayModeChange,
+    TResult Function(_SelectedCategory value)? changeCategory,
     TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {
@@ -872,6 +1238,337 @@ abstract class _Success implements GetProductsState {
   List<ProductModel> get products;
   @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DisplayModeImplCopyWith<$Res> {
+  factory _$$DisplayModeImplCopyWith(
+          _$DisplayModeImpl value, $Res Function(_$DisplayModeImpl) then) =
+      __$$DisplayModeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool isHorizontal});
+}
+
+/// @nodoc
+class __$$DisplayModeImplCopyWithImpl<$Res>
+    extends _$GetProductsStateCopyWithImpl<$Res, _$DisplayModeImpl>
+    implements _$$DisplayModeImplCopyWith<$Res> {
+  __$$DisplayModeImplCopyWithImpl(
+      _$DisplayModeImpl _value, $Res Function(_$DisplayModeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isHorizontal = null,
+  }) {
+    return _then(_$DisplayModeImpl(
+      isHorizontal: null == isHorizontal
+          ? _value.isHorizontal
+          : isHorizontal // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DisplayModeImpl implements _DisplayMode {
+  const _$DisplayModeImpl({required this.isHorizontal});
+
+  @override
+  final bool isHorizontal;
+
+  @override
+  String toString() {
+    return 'GetProductsState.displayModeChange(isHorizontal: $isHorizontal)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DisplayModeImpl &&
+            (identical(other.isHorizontal, isHorizontal) ||
+                other.isHorizontal == isHorizontal));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, isHorizontal);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DisplayModeImplCopyWith<_$DisplayModeImpl> get copyWith =>
+      __$$DisplayModeImplCopyWithImpl<_$DisplayModeImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() empty,
+    required TResult Function(List<ProductModel> products) success,
+    required TResult Function(bool isHorizontal) displayModeChange,
+    required TResult Function(int categoryId) changeCategory,
+    required TResult Function(String message) failure,
+  }) {
+    return displayModeChange(isHorizontal);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? empty,
+    TResult? Function(List<ProductModel> products)? success,
+    TResult? Function(bool isHorizontal)? displayModeChange,
+    TResult? Function(int categoryId)? changeCategory,
+    TResult? Function(String message)? failure,
+  }) {
+    return displayModeChange?.call(isHorizontal);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? empty,
+    TResult Function(List<ProductModel> products)? success,
+    TResult Function(bool isHorizontal)? displayModeChange,
+    TResult Function(int categoryId)? changeCategory,
+    TResult Function(String message)? failure,
+    required TResult orElse(),
+  }) {
+    if (displayModeChange != null) {
+      return displayModeChange(isHorizontal);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Empty value) empty,
+    required TResult Function(_Success value) success,
+    required TResult Function(_DisplayMode value) displayModeChange,
+    required TResult Function(_SelectedCategory value) changeCategory,
+    required TResult Function(_Failure value) failure,
+  }) {
+    return displayModeChange(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_DisplayMode value)? displayModeChange,
+    TResult? Function(_SelectedCategory value)? changeCategory,
+    TResult? Function(_Failure value)? failure,
+  }) {
+    return displayModeChange?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Empty value)? empty,
+    TResult Function(_Success value)? success,
+    TResult Function(_DisplayMode value)? displayModeChange,
+    TResult Function(_SelectedCategory value)? changeCategory,
+    TResult Function(_Failure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (displayModeChange != null) {
+      return displayModeChange(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DisplayMode implements GetProductsState {
+  const factory _DisplayMode({required final bool isHorizontal}) =
+      _$DisplayModeImpl;
+
+  bool get isHorizontal;
+  @JsonKey(ignore: true)
+  _$$DisplayModeImplCopyWith<_$DisplayModeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SelectedCategoryImplCopyWith<$Res> {
+  factory _$$SelectedCategoryImplCopyWith(_$SelectedCategoryImpl value,
+          $Res Function(_$SelectedCategoryImpl) then) =
+      __$$SelectedCategoryImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int categoryId});
+}
+
+/// @nodoc
+class __$$SelectedCategoryImplCopyWithImpl<$Res>
+    extends _$GetProductsStateCopyWithImpl<$Res, _$SelectedCategoryImpl>
+    implements _$$SelectedCategoryImplCopyWith<$Res> {
+  __$$SelectedCategoryImplCopyWithImpl(_$SelectedCategoryImpl _value,
+      $Res Function(_$SelectedCategoryImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? categoryId = null,
+  }) {
+    return _then(_$SelectedCategoryImpl(
+      categoryId: null == categoryId
+          ? _value.categoryId
+          : categoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SelectedCategoryImpl implements _SelectedCategory {
+  const _$SelectedCategoryImpl({required this.categoryId});
+
+  @override
+  final int categoryId;
+
+  @override
+  String toString() {
+    return 'GetProductsState.changeCategory(categoryId: $categoryId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectedCategoryImpl &&
+            (identical(other.categoryId, categoryId) ||
+                other.categoryId == categoryId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, categoryId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SelectedCategoryImplCopyWith<_$SelectedCategoryImpl> get copyWith =>
+      __$$SelectedCategoryImplCopyWithImpl<_$SelectedCategoryImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() empty,
+    required TResult Function(List<ProductModel> products) success,
+    required TResult Function(bool isHorizontal) displayModeChange,
+    required TResult Function(int categoryId) changeCategory,
+    required TResult Function(String message) failure,
+  }) {
+    return changeCategory(categoryId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? empty,
+    TResult? Function(List<ProductModel> products)? success,
+    TResult? Function(bool isHorizontal)? displayModeChange,
+    TResult? Function(int categoryId)? changeCategory,
+    TResult? Function(String message)? failure,
+  }) {
+    return changeCategory?.call(categoryId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? empty,
+    TResult Function(List<ProductModel> products)? success,
+    TResult Function(bool isHorizontal)? displayModeChange,
+    TResult Function(int categoryId)? changeCategory,
+    TResult Function(String message)? failure,
+    required TResult orElse(),
+  }) {
+    if (changeCategory != null) {
+      return changeCategory(categoryId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Empty value) empty,
+    required TResult Function(_Success value) success,
+    required TResult Function(_DisplayMode value) displayModeChange,
+    required TResult Function(_SelectedCategory value) changeCategory,
+    required TResult Function(_Failure value) failure,
+  }) {
+    return changeCategory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Empty value)? empty,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_DisplayMode value)? displayModeChange,
+    TResult? Function(_SelectedCategory value)? changeCategory,
+    TResult? Function(_Failure value)? failure,
+  }) {
+    return changeCategory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Empty value)? empty,
+    TResult Function(_Success value)? success,
+    TResult Function(_DisplayMode value)? displayModeChange,
+    TResult Function(_SelectedCategory value)? changeCategory,
+    TResult Function(_Failure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (changeCategory != null) {
+      return changeCategory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SelectedCategory implements GetProductsState {
+  const factory _SelectedCategory({required final int categoryId}) =
+      _$SelectedCategoryImpl;
+
+  int get categoryId;
+  @JsonKey(ignore: true)
+  _$$SelectedCategoryImplCopyWith<_$SelectedCategoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -943,6 +1640,8 @@ class _$FailureImpl implements _Failure {
     required TResult Function() loading,
     required TResult Function() empty,
     required TResult Function(List<ProductModel> products) success,
+    required TResult Function(bool isHorizontal) displayModeChange,
+    required TResult Function(int categoryId) changeCategory,
     required TResult Function(String message) failure,
   }) {
     return failure(message);
@@ -955,6 +1654,8 @@ class _$FailureImpl implements _Failure {
     TResult? Function()? loading,
     TResult? Function()? empty,
     TResult? Function(List<ProductModel> products)? success,
+    TResult? Function(bool isHorizontal)? displayModeChange,
+    TResult? Function(int categoryId)? changeCategory,
     TResult? Function(String message)? failure,
   }) {
     return failure?.call(message);
@@ -967,6 +1668,8 @@ class _$FailureImpl implements _Failure {
     TResult Function()? loading,
     TResult Function()? empty,
     TResult Function(List<ProductModel> products)? success,
+    TResult Function(bool isHorizontal)? displayModeChange,
+    TResult Function(int categoryId)? changeCategory,
     TResult Function(String message)? failure,
     required TResult orElse(),
   }) {
@@ -983,6 +1686,8 @@ class _$FailureImpl implements _Failure {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
     required TResult Function(_Success value) success,
+    required TResult Function(_DisplayMode value) displayModeChange,
+    required TResult Function(_SelectedCategory value) changeCategory,
     required TResult Function(_Failure value) failure,
   }) {
     return failure(this);
@@ -995,6 +1700,8 @@ class _$FailureImpl implements _Failure {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
     TResult? Function(_Success value)? success,
+    TResult? Function(_DisplayMode value)? displayModeChange,
+    TResult? Function(_SelectedCategory value)? changeCategory,
     TResult? Function(_Failure value)? failure,
   }) {
     return failure?.call(this);
@@ -1007,6 +1714,8 @@ class _$FailureImpl implements _Failure {
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
     TResult Function(_Success value)? success,
+    TResult Function(_DisplayMode value)? displayModeChange,
+    TResult Function(_SelectedCategory value)? changeCategory,
     TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {

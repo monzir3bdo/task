@@ -1,6 +1,12 @@
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:permission_handler/permission_handler.dart';
+
+import '../di/injection_container.dart';
 
 part 'image_picker_cubit.freezed.dart';
 part 'image_picker_state.dart';
@@ -12,18 +18,27 @@ class ImagePickerCubit extends Cubit<ImagePickerState> {
   List<String> imagesPath = ['', '', '', ''];
   List<XFile> imagesList = [];
   Future<void> pickImages() async {
-    emit(const ImagePickerState.loading());
+    try {
+      emit(const ImagePickerState.loading());
 
-    ImagePicker imagePicker = ImagePicker();
-    imagesList = await imagePicker.pickMultiImage(limit: 4);
+      ImagePicker imagePicker = ImagePicker();
+      imagesList = await imagePicker.pickMultiImage(limit: 4);
 
-    if (imagesList == null) return;
-    if (imagesList.length > 4) {
-      imagesList = imagesList.sublist(0, 4);
+      if (imagesList == null) return;
+      if (imagesList.length > 4) {
+        imagesList = imagesList.sublist(0, 4);
+      }
+      getImagePath();
+
+      emit(ImagePickerState.success(images: imagesPath));
+    } catch (e) {
+      final status = await PermissionStatus.denied;
+      if (status.isDenied) {
+        if (Platform.isIOS) _showCupertinoDialog();
+      } else {
+        debugPrint('Image Permission:$e');
+      }
     }
-    getImagePath();
-
-    emit(ImagePickerState.success(images: imagesPath));
   }
 
   getImagePath() {
@@ -49,12 +64,37 @@ class ImagePickerCubit extends Cubit<ImagePickerState> {
   reset() {
     imagesPath = ['', '', '', ''];
     images = [];
-    emit(ImagePickerState.initial());
+    emit(const ImagePickerState.initial());
   }
 
   @override
   Future<void> close() {
     reset();
     return super.close();
+  }
+
+  Future _showCupertinoDialog() {
+    return showCupertinoDialog(
+      context: sl<GlobalKey<NavigatorState>>().currentState!.context,
+      builder: (context) {
+        return CupertinoAlertDialog(
+          title: const Text('Permission Denied'),
+          content:
+              const Text('You need to give permission to access your gallery'),
+          actions: <Widget>[
+            CupertinoDialogAction(
+              child: const Text('Cancel'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            const CupertinoDialogAction(
+              onPressed: openAppSettings,
+              child: Text('Setttings'),
+            ),
+          ],
+        );
+      },
+    );
   }
 }

@@ -57,6 +57,18 @@ class AppTextField extends StatelessWidget {
             color: ColorsManager.textFieldStrokeColor,
           ),
         ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: const BorderSide(
+            color: ColorsManager.red,
+          ),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(14),
+          borderSide: const BorderSide(
+            color: ColorsManager.red,
+          ),
+        ),
       ),
     );
   }

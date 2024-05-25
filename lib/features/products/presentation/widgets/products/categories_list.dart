@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task/core/utils/utils.dart';
+import 'package:task/features/products/presentation/bloc/get_products/get_products_bloc.dart';
 import 'package:task/features/products/presentation/bloc/products_screen_cubit/products_cubit.dart';
 import 'package:task/features/products/presentation/widgets/products/category_item_widget.dart';
 
@@ -20,13 +21,23 @@ class CategoriesList extends StatelessWidget {
                 if (index == 0) {
                   return CategoryItemWidget(
                     isSelected: cubit.selectCategory == index,
-                    onTap: () => cubit.changeSelectCategory(index),
+                    onTap: () {
+                      cubit.changeSelectCategory(index);
+                      context.read<GetProductsBloc>().add(
+                          GetProductsEvent.changeCategory(
+                              category: Utils.categories[index].category));
+                    },
                     categoryModel: Utils.categories[index],
                   );
                 } else {
                   return CategoryItemWidget(
                     isSelected: cubit.selectCategory == index,
-                    onTap: () => cubit.changeSelectCategory(index),
+                    onTap: () {
+                      cubit.changeSelectCategory(index);
+                      context.read<GetProductsBloc>().add(
+                          GetProductsEvent.changeCategory(
+                              category: Utils.categories[index].category));
+                    },
                     categoryModel: Utils.categories[index],
                   );
                 }

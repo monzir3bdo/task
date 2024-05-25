@@ -15,7 +15,7 @@ class AddProductBloc extends Bloc<AddProductEvent, AddProductState> {
   final TextEditingController productController = TextEditingController();
   final TextEditingController storeNameController = TextEditingController();
   final TextEditingController priceController = TextEditingController();
-  String selectedCategory = '';
+  Categories? selectedCategory;
   AddProductBloc() : super(const AddProductState.initial()) {
     on<_AddNewProductEvent>(_addProduct);
   }
@@ -26,7 +26,7 @@ class AddProductBloc extends Bloc<AddProductEvent, AddProductState> {
         productName: productController.text.trim(),
         storeName: storeNameController.text.trim(),
         price: priceController.text.trim(),
-        category: selectedCategory,
+        category: selectedCategory!,
         photos: event.images,
       );
       HiveDatabase.instance.productsBox!.add(productModel);
@@ -35,14 +35,10 @@ class AddProductBloc extends Bloc<AddProductEvent, AddProductState> {
   }
 
   bool validate() {
-    if (!formKey.currentState!.validate() &&
-        productController.text.isEmpty &&
-        storeNameController.text.isEmpty &&
-        priceController.text.isEmpty &&
-        selectedCategory.isEmpty) {
-      return false;
-    } else {
+    if (formKey.currentState!.validate() && selectedCategory != null) {
       return true;
+    } else {
+      return false;
     }
   }
 

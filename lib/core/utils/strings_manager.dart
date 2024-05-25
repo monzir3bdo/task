@@ -22,8 +22,10 @@ abstract class StringsManager {
   static const String enterValidNumber = 'قم بإدخال سعر';
   static const String enterValidProductName = 'قم بإدخال اسم صالح';
   static const String enterValidStoreName = 'قم بإدخال اسم متجر صالح';
-  static const String enterCategory = 'قم بإختيار تصنيف';
-  static const String enterProductPhoto = 'قم بإدخال صورة للمنتج';
+  static const String enterCategory = 'قم بإختيار تصنيف للمنتج';
+  static const String enterProductPhoto =
+      'قم بإدخال صورة واحدة للمنتج على الاقل';
   static const String emptyProductList =
       'قائمة المنتجات فارغة قم بإضافة بعض المنتجات';
+  static const String productAddedSuccessfully = 'تمت إضافة المنتج ينجاح';
 }

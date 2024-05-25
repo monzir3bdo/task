@@ -12,13 +12,9 @@ class ProductsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: MultiBlocProvider(
-          providers: [
-            BlocProvider(
-              create: (context) => sl<ProductsCubit>(),
-            ),
-          ],
-          child: ProductsScreenBody(),
+        child: BlocProvider(
+          create: (context) => sl<ProductsCubit>(),
+          child: const ProductsScreenBody(),
         ),
       ),
     );

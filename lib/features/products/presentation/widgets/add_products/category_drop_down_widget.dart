@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task/core/extensions/build_context_extensions.dart';
 import 'package:task/core/styles/text_styles_manager.dart';
 import 'package:task/core/utils/strings_manager.dart';
+import 'package:task/features/products/data/models/product_model.dart';
 import 'package:task/features/products/presentation/bloc/add_product/add_product_bloc.dart';
 
 import '../../../../../core/styles/colors_manager.dart';
@@ -15,11 +16,10 @@ class CategoryDropDownWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AddProductBloc, AddProductState>(
       builder: (context, state) {
-        return DropdownMenu(
+        return DropdownMenu<Categories>(
           onSelected: (category) {
             context.productBloc.selectedCategory = category!;
           },
-          initialSelection: context.productBloc.selectedCategory,
           hintText: StringsManager.theNameOfTheCategory,
           textStyle: TextStylesManager.regular12.copyWith(
             color: const Color(
@@ -55,15 +55,15 @@ class CategoryDropDownWidget extends StatelessWidget {
               ),
             ),
           ),
-          dropdownMenuEntries: const [
+          dropdownMenuEntries: [
             DropdownMenuEntry(
-                value: StringsManager.category1,
+                value: Categories.firstCategory,
                 label: StringsManager.category1),
             DropdownMenuEntry(
-                value: StringsManager.category2,
+                value: Categories.secondCategory,
                 label: StringsManager.category2),
             DropdownMenuEntry(
-                value: StringsManager.category3,
+                value: Categories.thirdCategory,
                 label: StringsManager.category3),
           ],
         );

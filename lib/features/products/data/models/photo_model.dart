@@ -5,7 +5,7 @@ import 'package:image_picker/image_picker.dart';
 
 part 'photo_model.g.dart';
 
-@HiveType(typeId: 1)
+@HiveType(typeId: 2)
 class PhotoModel extends XFile {
   @override
   @HiveField(1)

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:task/features/products/presentation/widgets/products/product_name_widget.dart';
 import 'package:task/features/products/presentation/widgets/products/product_price_widget.dart';
 import 'package:task/features/products/presentation/widgets/products/store_name_widget.dart';
 
@@ -14,12 +13,9 @@ class GridTitleAndPriceAndStoreNameWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
       children: [
-        ProductNameWidget(
-          productName: productModel.productName,
-        ),
         Gap(5.h),
         ProductPriceWidget(
           price: productModel.price,

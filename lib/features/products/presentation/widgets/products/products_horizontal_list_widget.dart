@@ -12,7 +12,7 @@ class ProductsHorizontalListViewWidget extends StatelessWidget {
     return ListView.separated(
       itemCount: products.length,
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return ProductItemWidget(
           productModel: products[index],
