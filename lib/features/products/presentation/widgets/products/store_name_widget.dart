@@ -22,6 +22,7 @@ class StoreNameWidget extends StatelessWidget {
             color: ColorsManager.storeNameTextColor,
           ),
           textAlign: TextAlign.center,
+          overflow: TextOverflow.ellipsis,
         ),
       ),
     );

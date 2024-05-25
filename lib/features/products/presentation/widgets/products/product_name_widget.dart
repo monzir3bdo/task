@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/styles/text_styles_manager.dart';
 
@@ -10,9 +9,7 @@ class ProductNameWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       productName,
-      style: TextStylesManager.medium18.copyWith(
-        fontSize: 15.sp,
-      ),
+      style: TextStylesManager.medium18,
       maxLines: 2,
       softWrap: true,
     );
