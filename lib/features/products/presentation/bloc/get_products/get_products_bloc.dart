@@ -37,30 +37,49 @@ class GetProductsBloc extends Bloc<GetProductsEvent, GetProductsState> {
     );
   }
 
-  FutureOr<void> _changeCategory(
+  _changeCategory(
       _ChangeCategoryEvent event, Emitter<GetProductsState> state) {
+    if(productsList.isEmpty){}
     switch (event.category) {
       case Categories.all:
         emit(GetProductsState.success(products: productsList));
       case Categories.firstCategory:
-        emit(GetProductsState.success(
-            products: productsList
-                .where(
-                    (element) => element.category == Categories.firstCategory)
-                .toList()));
+        final firstCategory=productsList
+        .where(
+    (element) => element.category == Categories.firstCategory)
+        .toList();
+        if(firstCategory.isEmpty){
+          emit(const GetProductsState.empty());
+    }
+      else{
+          emit(GetProductsState.success(
+              products: firstCategory));
+        }
       case Categories.secondCategory:
-        emit(GetProductsState.success(
-            products: productsList
-                .where(
-                    (element) => element.category == Categories.secondCategory)
-                .toList()));
+        final secondCategory=productsList
+            .where(
+                (element) => element.category == Categories.secondCategory)
+            .toList();
+        if(secondCategory.isEmpty){
+          emit(const GetProductsState.empty());
+        }
+        else{
+          emit(GetProductsState.success(
+              products: secondCategory));
+        }
+
       case Categories.thirdCategory:
-        emit(GetProductsState.success(
-            products: productsList
-                .where(
-                  (element) => element.category == Categories.thirdCategory,
-                )
-                .toList()));
+        final thirdCategory=productsList
+            .where(
+              (element) => element.category == Categories.thirdCategory,
+        ).toList();
+        if(thirdCategory.isEmpty){
+          emit(const GetProductsState.empty());
+        }
+        else{
+          emit(GetProductsState.success(products: thirdCategory));
+        }
+
       default:
         emit(GetProductsState.success(products: productsList));
     }

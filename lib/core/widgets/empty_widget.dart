@@ -21,10 +21,10 @@ class EmptyWidget extends StatelessWidget {
             Assets.jsonEmpty,
             fit: BoxFit.cover,
             alignment: Alignment.bottomCenter,
-            height: 400,
+            height: 400.h,
           ),
         ),
-        Gap(30.h),
+        Gap(20.h),
         Text(
           StringsManager.emptyProductList,
           style: TextStylesManager.medium18.copyWith(

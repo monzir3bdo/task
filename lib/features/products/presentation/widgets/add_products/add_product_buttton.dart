@@ -58,7 +58,7 @@ class AddProductButtonWidget extends StatelessWidget {
                     context: context, message: StringsManager.enterCategory);
               }
             } else {
-              print(context.productBloc.selectedCategory);
+
               context.productBloc.add(
                 AddProductEvent.addNewProduct(
                   images: context

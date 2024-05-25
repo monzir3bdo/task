@@ -27,5 +27,5 @@ abstract class StringsManager {
       'قم بإدخال صورة واحدة للمنتج على الاقل';
   static const String emptyProductList =
       'قائمة المنتجات فارغة قم بإضافة بعض المنتجات';
-  static const String productAddedSuccessfully = 'تمت إضافة المنتج ينجاح';
+  static const String productAddedSuccessfully = 'تمت إضافة المنتج بنجاح';
 }
