@@ -5,7 +5,10 @@ abstract class StringsManager {
   static const String category1 = 'تصنيف 1';
   static const String category2 = 'تصنيف 2';
   static const String category3 = 'تصنيف 3';
-  static const String changeDisplayMode = 'تغير عرض المنتجات الى أفقي ';
+  static const String changeDisplayModeToHorizontal =
+      'تغير عرض المنتجات الى أفقي ';
+  static const String changeDisplayModeToVertical =
+      'تغير عرض المنتجات الى عمودي ';
   static const String exampleText = 'هذا النص هو مثال لنص';
   static const String dollar = 'دولار';
   static const String storeName = 'اسم المتجر';

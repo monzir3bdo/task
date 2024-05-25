@@ -43,10 +43,16 @@ class ChangeDisplayModeWidget extends StatelessWidget {
                       fit: BoxFit.scaleDown,
                     ),
                     const Gap(9),
-                    Text(
-                      StringsManager.changeDisplayMode,
-                      style: TextStylesManager.regular12
-                          .copyWith(color: ColorsManager.red),
+                    BlocBuilder<ProductsCubit, ProductsState>(
+                      builder: (context, state) {
+                        return Text(
+                          context.read<ProductsCubit>().isHorizontal
+                              ? StringsManager.changeDisplayModeToVertical
+                              : StringsManager.changeDisplayModeToHorizontal,
+                          style: TextStylesManager.regular12
+                              .copyWith(color: ColorsManager.red),
+                        );
+                      },
                     )
                   ],
                 ),
